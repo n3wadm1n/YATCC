@@ -1,3 +1,10 @@
+#!/usr/bin/python3
+####################
+################
+### n3wadm1n #####
+### Euribot  #####
+#####################
+
 import requests, readline, argparse
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 from colored import fg, attr
