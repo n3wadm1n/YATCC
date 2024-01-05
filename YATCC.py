@@ -17,7 +17,7 @@ def check_x_frame_options(url):
         requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
         response = requests.get(url, verify=False)
         if 'X-Frame-Options' in response.headers:
-            return f"\n{fg(226)}URL: {url}\n{fg(46)}Doesn't appear to be vulnerable to ClickJacking. Value: {response.headers['X-Frame-Options']}\n--------------------------------------------------------------------\n"
+            return f"\n{fg(226)}URL: {url}\n{fg(46)}Doesn't seems to be vulnerable to ClickJacking. Value: {response.headers['X-Frame-Options']}\n--------------------------------------------------------------------\n"
         else:
             return f"\n{fg(226)}URL: {url}\n{fg(196)}It's VULNERABLE to Clickjacking!\n--------------------------------------------------------------------\n"
     except requests.exceptions.RequestException as e:
